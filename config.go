@@ -11,12 +11,14 @@ import (
 
 var configMap = map[string]*Config{}
 
+// A Config holds golintx config
 type Config struct {
-	Exclude     ExcludesConfig
+	Exclude     ExcludeConfig
 	Initialisms []string
 }
 
-type ExcludesConfig struct {
+// A ExcludeConfig holds "exclude" section in config
+type ExcludeConfig struct {
 	Categories []string
 }
 
